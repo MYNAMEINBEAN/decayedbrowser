@@ -23,8 +23,20 @@
             <button id="btn-scram" class="toolbar-shortcut" title="Enable Scram"><i data-lucide="zap"></i></button>
             <button id="btn-incognito" class="toolbar-shortcut" title="Open incognito"><i data-lucide="eye-off"></i></button>
           </div>
-          <input id="addr" class="addr-input" type="text" placeholder="Search or enter URL" />
-            </div>
+          
+          <form id="idk" class="d-flex w-100">
+            <input
+              id="url"
+              type="text"
+              class="search-input addr-input"
+              placeholder="Search or enter URL"
+            />
+            <select id="proxysel" class="ms-2">
+              <option value="scramjet">scramjet</option>
+              <option value="scramjet">scramjet</option>
+            </select>
+          </form>
+          </div>
 
         <div class="browser-view">
           <div class="browser-topbar">
@@ -32,7 +44,7 @@
               <button id="btn-new-tab" class="tab-new" title="New tab"><i data-lucide="plus"></i></button>
             </div>
           </div>
-          <iframe id="browser-iframe" class="browser-iframe" src="about:blank" sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
+          <iframe id="iframe" class="browser-iframe" src="about:blank" sandbox="allow-scripts allow-same-origin allow-forms" width="100%" height="100%"></iframe>
         </div>
 
 
@@ -62,6 +74,9 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>window.lucide && lucide.createIcons();</script>
   <script src="jobs.js"></script>
+  
+  <script src="/baremux/index.js" defer></script>
+  <script src="/scramjet/scramjet.all.js" defer></script>
   
 </body>
 </html>
